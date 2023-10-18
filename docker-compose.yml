@@ -1,0 +1,9 @@
+version: "23.0.5"
+services:
+  discovery:
+    build: ./Eureka_server
+    ports:
+    - 8761:8761
+    image: eureka_image
+
+# liste des microservice 
