@@ -1,0 +1,3 @@
+[submodule "auction-management-microservice"]
+	path = auction-management-microservice
+	url = https://github.com/tanfust/auction-management-microservice.git
