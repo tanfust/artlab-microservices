@@ -1,3 +1,6 @@
 [submodule "auction-management-microservice"]
 	path = auction-management-microservice
 	url = https://github.com/tanfust/auction-management-microservice.git
+[submodule "user-management-microservice"]
+	path = user-management-microservice
+	url = https://github.com/tanfust/user-management-microservice.git
