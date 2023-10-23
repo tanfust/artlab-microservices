@@ -4,3 +4,6 @@
 [submodule "user-management-microservice"]
 	path = user-management-microservice
 	url = https://github.com/tanfust/user-management-microservice.git
+[submodule "Blog-management-microservice"]
+	path = Blog-management-microservice
+	url = https://github.com/tanfust/Blog-management-microservice.git
