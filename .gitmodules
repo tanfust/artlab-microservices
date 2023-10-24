@@ -7,3 +7,6 @@
 [submodule "Blog-management-microservice"]
 	path = Blog-management-microservice
 	url = https://github.com/tanfust/Blog-management-microservice.git
+[submodule "order-management-microservice"]
+	path = order-management-microservice
+	url = https://github.com/tanfust/order-management-microservice
