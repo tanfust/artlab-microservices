@@ -13,3 +13,9 @@
 [submodule "artlab-client"]
 	path = artlab-client
 	url = https://github.com/tanfust/artlab-client
+[submodule "Gallery-management-microservice"]
+	path = Gallery-management-microservice
+	url = https://github.com/tanfust/Gallery-management-microservice.git
+[submodule "event-management-microservice"]
+	path = event-management-microservice
+	url = https://github.com/tanfust/event-management-microservice.git
