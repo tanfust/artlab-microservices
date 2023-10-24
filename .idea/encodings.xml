@@ -4,6 +4,9 @@
     <file url="file://$PROJECT_DIR$/Api_Gateway_server/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Blog-management-microservice/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Eureka_server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Gallery-management-microservice/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/auction-management-microservice/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/event-management-microservice/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/order-management-microservice/src/main/java" charset="UTF-8" />
   </component>
 </project>

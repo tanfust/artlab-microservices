@@ -3,7 +3,11 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/Blog-management-microservice" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Gallery-management-microservice" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/artlab-client" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/auction-management-microservice" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/event-management-microservice" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/order-management-microservice" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/user-management-microservice" vcs="Git" />
   </component>
 </project>

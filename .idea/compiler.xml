@@ -2,13 +2,17 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Eureka_server" />
-        <module name="Api_Gateway_server" />
+        <module name="Gallery-management-microservice" />
         <module name="auction-management-microservice" />
+        <module name="Eureka_server" />
+        <module name="event-managment-microservice" />
+        <module name="Api_Gateway_server" />
+        <module name="order-management-microservice" />
         <module name="blog-management-microservice" />
       </profile>
     </annotationProcessing>
@@ -17,8 +21,11 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="Api_Gateway_server" options="-parameters" />
       <module name="Eureka_server" options="-parameters" />
+      <module name="Gallery-management-microservice" options="-parameters" />
       <module name="auction-management-microservice" options="-parameters" />
       <module name="blog-management-microservice" options="-parameters" />
+      <module name="event-managment-microservice" options="-parameters" />
+      <module name="order-management-microservice" options="-parameters" />
     </option>
   </component>
 </project>

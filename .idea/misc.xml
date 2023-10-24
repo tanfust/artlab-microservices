@@ -8,6 +8,9 @@
         <option value="$PROJECT_DIR$/Api_Gateway_server/pom.xml" />
         <option value="$PROJECT_DIR$/Blog-management-microservice/pom.xml" />
         <option value="$PROJECT_DIR$/auction-management-microservice/pom.xml" />
+        <option value="$PROJECT_DIR$/event-management-microservice/pom.xml" />
+        <option value="$PROJECT_DIR$/Gallery-management-microservice/pom.xml" />
+        <option value="$PROJECT_DIR$/order-management-microservice/pom.xml" />
       </list>
     </option>
   </component>

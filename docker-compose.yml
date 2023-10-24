@@ -12,6 +12,12 @@ services:
     image: gateway
     depends_on:
       - discovery
+      - blog-ms
+      - auction-ms
+      - event-ms
+      - order-ms
+      - gallery-ms
+      - user-ms
     environment:
       - eureka.client.serviceUrl.defaultZone=http://discovery:8761/eureka/
   blog-ms:
