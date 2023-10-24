@@ -9,6 +9,7 @@ import org.springframework.web.cors.reactive.CorsWebFilter;
 import org.springframework.web.cors.reactive.UrlBasedCorsConfigurationSource;
 @Configuration
 public class SpringCloudConfig {
+
 //    @Bean
 //    public CorsWebFilter corsWebFilter() {
 //        CorsConfiguration corsConfig = new CorsConfiguration();
@@ -22,18 +23,22 @@ public class SpringCloudConfig {
 //        return new CorsWebFilter(source);
 //    }
 //
-//    @Bean
-//    public RouteLocator gatewayRoutes(RouteLocatorBuilder builder) {
-//        return builder.routes()
+    @Bean
+    public RouteLocator gatewayRoutes(RouteLocatorBuilder builder) {
+        return builder.routes()
 //                .route(r -> r.path("/users/**")
-//                        .uri("http://localhost:3000/")
-//
-//                )
+//                        .uri("http://localhost:3000/"))
 //                .route(r -> r.path("/Article/**")
-//                        .uri("http://localhost:8001/"))
+//                        .uri("http://blog-management-microservice:8001/"))
 //                .route(r -> r.path("/auction/**")
-//                        .uri("http://localhost:8002/"))
-//                .build();
-//
-//    }
+//                        .uri("http://auction-management-microservice:8002/"))
+//                .route(r -> r.path("/gallery/**")
+//                        .uri("http://Gallery-management-microservice:8006/"))
+//                .route(r -> r.path("/order/**")
+//                        .uri("http://order-management-microservice:8005/"))
+//                .route(r -> r.path("/event/**")
+//                        .uri("http://event-management-microservice:8004/"))
+                .build();
+
+    }
 }
