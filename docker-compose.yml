@@ -5,7 +5,6 @@ services:
     ports:
       - 8761:8761
     image: eureka_image
-
   gateway:
     build: ./Api_Gateway_server
     ports:
@@ -15,17 +14,6 @@ services:
       - discovery
     environment:
       - eureka.client.serviceUrl.defaultZone=http://discovery:8761/eureka/
-
-  auction-ms:
-    build: ./auction-management-microservice
-    ports:
-      - 8002:8002
-    image: auction-ms
-    depends_on:
-      - discovery
-    environment:
-      - eureka.client.serviceUrl.defaultZone=http://discovery:8761/eureka/
-
   blog-ms:
     build: ./Blog-management-microservice
     ports:
@@ -35,14 +23,53 @@ services:
       - discovery
     environment:
       - eureka.client.serviceUrl.defaultZone=http://discovery:8761/eureka/
-
-  user-ms:
-    build: ./user-management-microservice
+  auction-ms:
+    build: ./auction-management-microservice
     ports:
-      - 3000:3000
-    image: user-ms
-    command: npm run start
+      - 8002:8002
+    image: auction-ms
     depends_on:
       - discovery
     environment:
       - eureka.client.serviceUrl.defaultZone=http://discovery:8761/eureka/
+  event-ms:
+    build: ./event-management-microservice
+    ports:
+      - 8004:8004
+    image: event-ms
+    depends_on:
+      - discovery
+    environment:
+      - eureka.client.serviceUrl.defaultZone=http://discovery:8761/eureka/
+  order-ms:
+    build: ./order-management-microservice
+    ports:
+      - 8005:8005
+    image: order-ms
+    depends_on:
+      - discovery
+    environment:
+      - eureka.client.serviceUrl.defaultZone=http://discovery:8761/eureka/
+  gallery-ms:
+    build: ./Gallery-management-microservice
+    ports:
+      - 8006:8006
+    image: gallery-ms
+    depends_on:
+      - discovery
+    environment:
+      - eureka.client.serviceUrl.defaultZone=http://discovery:8761/eureka/
+  user-ms:
+    build: ./user-management-microservice
+    ports:
+      - 3001:3001
+    image: user-ms
+    depends_on:
+      - discovery
+    environment:
+      - eureka.client.serviceUrl.defaultZone=http://discovery:8761/eureka/
+  client-ms:
+    build: ./artlab-client
+    ports:
+      - 3000:3000
+    image: client-ms
