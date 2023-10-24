@@ -10,3 +10,6 @@
 [submodule "order-management-microservice"]
 	path = order-management-microservice
 	url = https://github.com/tanfust/order-management-microservice
+[submodule "artlab-client"]
+	path = artlab-client
+	url = https://github.com/tanfust/artlab-client
