@@ -1,9 +1,55 @@
 version: "23.0.5"
 services:
+  mongodb:
+    image: mongo:latest
+    restart: always
+    ports:
+      - 27017:27017
+
   discovery:
     build: ./Eureka_server
     ports:
-    - 8761:8761
+      - 8761:8761
     image: eureka_image
 
-# liste des microservice 
+  gateway:
+    build: ./Api_Gateway_server
+    ports:
+      - 8000:8000
+    image: gateway
+    depends_on:
+      - discovery
+    environment:
+      - eureka.client.serviceUrl.defaultZone=http://discovery:8761/eureka/
+
+  auction-ms:
+    build: ./auction-management-microservice
+    ports:
+      - 8002:8002
+    image: auction-ms
+    depends_on:
+      - discovery
+    environment:
+      - eureka.client.serviceUrl.defaultZone=http://discovery:8761/eureka/
+
+  blog-ms:
+    build: ./Blog-management-microservice
+    ports:
+      - 8001:8001
+    image: blog-ms
+    depends_on:
+      - discovery
+    environment:
+      - eureka.client.serviceUrl.defaultZone=http://discovery:8761/eureka/
+
+  user-ms:
+    build: ./user-management-microservice
+    ports:
+      - 3000:3000
+    image: user-ms
+    command: npm run start
+    depends_on:
+      - discovery
+      - mongodb
+    environment:
+      - eureka.client.serviceUrl.defaultZone=http://discovery:8761/eureka/

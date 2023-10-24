@@ -10,11 +10,14 @@ public class SpringCloudConfig {
 
     @Bean
     public RouteLocator gatewayRoutes(RouteLocatorBuilder builder) {
-        //List microservices
-    //Micro-service 1 (example)
         return builder.routes()
-                .route(r -> r.path("PATH_DE_MS")
-                        .uri("URI_DE_MS")
-                ).build();
+                .route(r -> r.path("/users/**")
+                        .uri("http://localhost:3000/"))
+                .route(r -> r.path("/Article/**")
+                        .uri("http://localhost:8001/"))
+                .route(r -> r.path("/auction/**")
+                        .uri("http://localhost:8002/"))
+                .build();
+       
     }
 }
