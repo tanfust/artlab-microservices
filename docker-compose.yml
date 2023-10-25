@@ -107,7 +107,6 @@ services:
     image: client-ms
     networks:
       - server-network
-
 networks:
   server-network:
 volumes:
